@@ -58,7 +58,7 @@ const Home: NextPage = () => {
                             mind is Artistic Expression - being able to express
                             yourself freely and not be judged. We use
                             our Imagination because the fact that you can come
-                            up with different ideas for something that's yours
+                            up with different ideas for something that&apos;s yours
                             is just amazing. The fact that you can daydream
                             about those different ideas and bring them to life
                             is really exciting, which is an excellent way to
