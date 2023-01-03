@@ -1,0 +1,32 @@
+/** Carousel */
+.carousel-image {
+    @apply w-full cursor-grab;
+}
+
+.carousel-image:active {
+    @apply cursor-grabbing;
+}
+
+.alice-carousel__stage-item {
+    @apply !px-2;
+}
+
+/* .alice-carousel__dots { */
+/*     @apply max-md:!hidden; */
+/* } */
+
+.alice-carousel__dots-item {
+    @apply !bg-base-content !p-1.5 !transition-all;
+}
+
+.alice-carousel__dots-item:hover {
+    @apply !opacity-50 !scale-125;
+}
+
+.alice-carousel__dots-item.__active {
+    @apply !bg-secondary !scale-125;
+}
+
+/* .alice-carousel__prev-btn, .alice-carousel__next-btn { */
+/*     @apply md:!hidden; */
+/* } */
