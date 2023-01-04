@@ -1,41 +1,16 @@
-import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
-// import { ChevronRight, ChevronLeft } from "react-feather"
 import AliceCarousel from "react-alice-carousel"
 import "react-alice-carousel/lib/alice-carousel.css"
 import imageImports from "~/static/showcase"
+import { useImageImports } from "~/utils"
+// import { ChevronRight, ChevronLeft } from "react-feather"
 
 export const Showcase = () => {
-    const handleDragStart = (e: React.DragEvent<HTMLImageElement>) => {
-        e.preventDefault()
-    }
-
-    const [images, setImages] = useState<React.ReactNode[]>([])
-
-    useEffect(() => {
-        const imageData = imageImports.map((data, i) => {
-            const { src, width, height, blurDataURL } = data[0]
-            const alt = data[1]
-
-            return (
-                <Image
-                    src={src}
-                    alt={alt}
-                    key={i}
-                    width={width}
-                    height={height}
-                    blurDataURL={blurDataURL}
-                    onDragStart={handleDragStart}
-                    role="presentation"
-                    className="carousel-image"
-                    placeholder="blur"
-                />
-            )
-        })
-
-        setImages(imageData)
-    }, [])
+    const images = useImageImports(imageImports, {
+        className: "carousel-image",
+        role: "presentation",
+        onDragStart: (e) => e.preventDefault(),
+    })
 
     return (
         <div className="wrapper">
@@ -81,7 +56,7 @@ export const Showcase = () => {
     )
 }
 
-// const prevButton = () => {
+// function prevButton(): React.ReactNode {
 //     return (
 //         <ChevronLeft
 //             className="btn-outline btn-secondary btn-sm btn-circle btn my-3.5 mr-1 p-1.5"
@@ -90,7 +65,7 @@ export const Showcase = () => {
 //     )
 // }
 
-// const nextButton = () => {
+// function nextButton(): React.ReactNode {
 //     return (
 //         <ChevronRight
 //             className="btn-outline btn-secondary btn-sm btn-circle btn my-3.5 ml-1 p-1.5"
