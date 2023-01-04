@@ -8,7 +8,7 @@ export const useImageImports = (
         className?: string
         role?: string
         onDragStart?: React.DragEventHandler
-    },
+    }
 ): React.ReactNode[] => {
     const [images, setImages] = useState<React.ReactNode[]>([])
     useEffect(() => {
@@ -34,7 +34,7 @@ export const useImageImports = (
         })
 
         setImages(imageData)
-    }, [])
+    }, []) // eslint-disable-line
 
     return images
 }
