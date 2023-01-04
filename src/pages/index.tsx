@@ -1,5 +1,4 @@
 import { type NextPage } from "next"
-import Link from "next/link"
 import Image from "next/image"
 import { hero } from "~/static/index"
 import { Showcase } from "~/components/Showcase"
