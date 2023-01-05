@@ -15,3 +15,4 @@ const imageImports: ImageImport[] = [
     [yumyum, "yumyum"],
 ]
 export default imageImports
+export { cottoncandy }

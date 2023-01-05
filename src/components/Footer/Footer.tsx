@@ -44,7 +44,7 @@ export const Footer = () => {
                     </ul>
                 </div>
             </footer>
-            <footer className="footer border-t border-base-300 px-10 py-6 max-md:footer-center">
+            <footer className="footer border-t border-base-300 px-10 pt-6 max-md:footer-center">
                 <div className="grid-flow-col items-center">
                     <Image src={logo} alt="wordplay4lyfe" className="!bg-transparent !shadow-none pt-2" />
                     <p>Copyright © 2022 - All right reserved wordplay4lyfe</p>

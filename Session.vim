@@ -13,12 +13,17 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +2 src/pages/index.tsx
+badd +1 src/components/Products/index.ts
+badd +1 ~/Code/wordplay4lyfe-next/src/components/Products/ProductFocus.tsx
+badd +1 ~/Code/wordplay4lyfe-next/src/components/Products/ProductGrid.tsx
+badd +1 ~/Code/wordplay4lyfe-next/src/components/Products/ProductPreview.tsx
+badd +1 src/pages/collections/index.tsx
 argglobal
 %argdel
 $argadd .
-edit src/pages/index.tsx
+edit src/pages/collections/index.tsx
 argglobal
+balt ~/Code/wordplay4lyfe-next/src/components/Products/ProductPreview.tsx
 setlocal fdm=manual
 setlocal fde=
 setlocal fmr={{{,}}}
@@ -29,12 +34,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 28) / 56)
+let s:l = 1 - ((0 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
-normal! 028|
+keepjumps 1
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

@@ -16,8 +16,6 @@ const Home: NextPage = () => {
                             className={`aspect-video w-full object-cover object-top`}
                             src={hero}
                             alt="Man standing in front of graffiti"
-                            // width={400}
-                            // height={225}
                             placeholder="blur"
                             priority
                         />
