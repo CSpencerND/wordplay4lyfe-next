@@ -1,12 +1,15 @@
 import Link from "next/link"
 
-export const SideBar = () => {
+export const SideBar = ({ handleClick }: { handleClick: () => void }) => {
     return (
-        <div className="drawer-side mt-[5rem]">
+        <div className="drawer-side mt-[5rem]" onClick={handleClick}>
             <label className="drawer-overlay !cursor-default"></label>
             <ul className="menu w-64 p-4 md:w-80">
                 <li>
                     <Link href="/">Home</Link>
+                </li>
+                <li>
+                    <Link href="/collections">Collections Directory</Link>
                 </li>
                 {/* <li className="menu-title"><span>Collections</span></li> */}
                 <li>
@@ -23,9 +26,6 @@ export const SideBar = () => {
                 </li>
                 <li>
                     <Link href="">Lifestyle Tess</Link>
-                </li>
-                <li>
-                    <Link href="">All Products</Link>
                 </li>
             </ul>
         </div>

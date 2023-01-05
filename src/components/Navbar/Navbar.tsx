@@ -1,11 +1,12 @@
-import { Twirl as Hamburger } from "hamburger-react"
 import Image from "next/image"
 import Link from "next/link"
 import Cart from "./Cart"
 import Account from "./Account"
 import logo from "./logo/wordplay-logo-reprisal.webp"
+import { Twirl as Hamburger } from "hamburger-react"
 
-export const Navbar = () => {
+type Props = { toggled: boolean }
+export const Navbar = ({ toggled }: Props) => {
     return (
         <header className="sticky top-0 z-50">
             <nav className="navbar p-3 lg:container lg:mx-auto">
@@ -18,6 +19,7 @@ export const Navbar = () => {
                         aria-labelledby="menuButtonText"
                     >
                         <Hamburger
+                            toggled={toggled}
                             rounded
                             size={24}
                             distance="lg"
@@ -29,13 +31,13 @@ export const Navbar = () => {
                     </label>
 
                     {/** Brand Logo **/}
-                    <Link href="/">
+                    <Link
+                        href="/"
+                        onClick={(event) => toggled && event.preventDefault()}
+                    >
                         <Image
                             id="logo"
-                            // className="max-h-14 w-full drop-shadow-[-1px_2px_4px_rgb(0,0,0)]"
-                            className="pt-2"
-                            // className="pt-2 drop-shadow-[-1px_2px_4px_#777]"
-                            // className="max-h-14 w-full drop-shadow-[-1px_2px_4px_#0b84b0]"
+                            className={!toggled ? "pt-2" : "pt-2 opacity-50 cursor-not-allowed transition-all"}
                             src={logo}
                             alt="Wordplay 4 Lyfe logo"
                         />
