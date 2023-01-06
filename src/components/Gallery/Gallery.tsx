@@ -3,13 +3,12 @@ import Image from "next/image"
 import imageImports from "~/static/gallery"
 
 const images = imageImports.map((data, i) => {
-    const { src, width, height, blurDataURL } = data[0]
-    const alt = data[1]
+    const { src, alt, width, height, blurDataURL } = data
 
     return (
         <Image
             src={src}
-            alt={alt}
+            alt={alt as string}
             key={i}
             width={width}
             height={height}

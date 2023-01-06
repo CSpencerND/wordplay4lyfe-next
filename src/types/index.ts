@@ -1,1 +1,2 @@
-export type { ImageImport } from "./ImageImport"
+import ImageImport, { ImageDataX } from "./ImageImport"
+export { type ImageImport, type ImageDataX }

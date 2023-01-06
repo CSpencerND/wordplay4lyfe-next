@@ -1,9 +1,9 @@
 import Image from "next/image"
-import { ImageImport } from "~/types"
+import { ImageDataX } from "~/types"
 import { useEffect, useState } from "react"
 
 export const useImageImports = (
-    imageImports: ImageImport[],
+    imageImports: ImageDataX[],
     props: {
         className?: string
         role?: string
@@ -13,13 +13,12 @@ export const useImageImports = (
     const [images, setImages] = useState<React.ReactNode[]>([])
     useEffect(() => {
         const imageData = imageImports.map((data, i) => {
-            const { src, width, height, blurDataURL } = data[0]
-            const alt = data[1]
+            const { src, alt, width, height, blurDataURL }: ImageDataX = data
 
             return (
                 <Image
                     src={src}
-                    alt={alt}
+                    alt={alt as string}
                     key={i}
                     width={width}
                     height={height}
