@@ -2,8 +2,10 @@ import Image from "next/image"
 import Link from "next/link"
 import Cart from "./Cart"
 import Account from "./Account"
-import logo from "./logo/wordplay-logo-reprisal.webp"
 import { Twirl as Hamburger } from "hamburger-react"
+
+import logo from "~/static/julee-gradient.svg"
+// import logo from "~/static/comforter-gradient.svg"
 
 type Props = { toggled: boolean }
 export const Navbar = ({ toggled }: Props) => {
@@ -37,7 +39,7 @@ export const Navbar = ({ toggled }: Props) => {
                     >
                         <Image
                             id="logo"
-                            className={!toggled ? "pt-2" : "pt-2 opacity-50 cursor-not-allowed transition-all"}
+                            className={!toggled ? "w-16" : "w-16 opacity-50 cursor-not-allowed transition-all"}
                             src={logo}
                             alt="Wordplay 4 Lyfe logo"
                         />
