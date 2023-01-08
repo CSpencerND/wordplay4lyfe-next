@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image"
-interface ImageDataX extends StaticImageData {
+interface ImageData extends StaticImageData {
     alt?: string | undefined
 }
 
-type ImageImport = [ImageDataX, string]
+type ImageImport = [ImageData, string]
 export default ImageImport
-export { type ImageDataX }
+export { type ImageData }

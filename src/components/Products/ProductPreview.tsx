@@ -25,7 +25,7 @@ export const ProductPreview = () => {
     return (
         <div className="card w-96">
             <figure>
-                <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+                <Image src="https://placeimg.com/400/225/arch" alt="Shoes" />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">
