@@ -10,16 +10,17 @@
     },
     "dependencies": {
         "@next/font": "13.1.1",
+        "@shopify/hydrogen-react": "^2022.10.6",
         "daisyui": "^2.46.0",
         "eslint-config-next": "13.1.1",
         "hamburger-react": "^2.5.0",
         "next": "13.1.1",
-        "react-alice-carousel": "^2.7.0",
+        "prettier-plugin-multiline-arrays": "^1.1.2",
         "react": "18.2.0",
+        "react-alice-carousel": "^2.7.0",
         "react-dom": "18.2.0",
         "react-feather": "^2.0.10",
-        "react-responsive-masonry": "^2.1.7",
-        "@shopify/hydrogen-react": "^2022.10.6"
+        "react-responsive-masonry": "^2.1.7"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.8",

@@ -1,12 +1,12 @@
 import Link from "next/link"
 import AliceCarousel from "react-alice-carousel"
 import "react-alice-carousel/lib/alice-carousel.css"
-import imageImportsX from "~/static/showcase"
+import imageImports from "~/static/showcase"
 import { useImageImports } from "~/utils"
 // import { ChevronRight, ChevronLeft } from "react-feather"
 
 export const Showcase = () => {
-    const images = useImageImports(imageImportsX, {
+    const images = useImageImports(imageImports, {
         className: "carousel-image",
         role: "presentation",
         onDragStart: (e) => e.preventDefault(),

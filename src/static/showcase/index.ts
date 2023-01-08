@@ -1,4 +1,4 @@
-import { ImageImport, ImageDataX } from "~/types"
+import { ImageImport, ImageData } from "~/types"
 import cottoncandy from "./cotton-candy.webp"
 import icecream from "./ice-cream.webp"
 import milkshake from "./milkshake.webp"
@@ -6,7 +6,7 @@ import strawberrycake from "./strawberry-cake.webp"
 import tastetherainbow from "./taste-the-rainbow.webp"
 import yumyum from "./yum-yum.webp"
 
-const imageImports: ImageImport[] = [
+const initialImports: ImageImport[] = [
     [cottoncandy, "cottoncandy"],
     [icecream, "icecream"],
     [milkshake, "milkshake"],
@@ -15,15 +15,15 @@ const imageImports: ImageImport[] = [
     [yumyum, "yumyum"],
 ]
 
-const imageImportsX: ImageDataX[] = []
+const imageImports: ImageData[] = []
 
-imageImports.forEach((imageImport) => {
+initialImports.forEach((imageImport) => {
     const imageData = imageImport[0]
     const alt: string = imageImport[1]
 
     imageData.alt = alt
-    imageImportsX.push(imageData)
+    imageImports.push(imageData)
 })
 
-export default imageImportsX
+export default imageImports
 export { cottoncandy }
