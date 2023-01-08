@@ -1,7 +1,7 @@
 import { Instagram, Twitter, Facebook } from "react-feather"
 import Link from "next/link"
 import Image from "next/image"
-import logo from "./wordplay-logo.png"
+import logo from "~/static/julee-gradient.svg"
 
 export const Footer = () => {
     return (
