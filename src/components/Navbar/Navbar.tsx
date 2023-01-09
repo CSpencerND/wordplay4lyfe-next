@@ -39,7 +39,7 @@ export const Navbar = ({ toggled }: Props) => {
                     >
                         <Image
                             id="logo"
-                            className={!toggled ? "w-16" : "w-16 opacity-50 cursor-not-allowed transition-all"}
+                            className={!toggled ? "w-20 rounded-none" : "w-20 rounded-none opacity-50 cursor-not-allowed transition-all"}
                             src={logo}
                             alt="Wordplay 4 Lyfe logo"
                         />

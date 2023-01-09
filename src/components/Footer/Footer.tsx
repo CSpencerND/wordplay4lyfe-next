@@ -9,7 +9,7 @@ export const Footer = () => {
     return (
         <>
             <footer className="footer p-10 max-md:footer-center">
-                <div className="form-control w-80">
+                <div className="form-control">
                     <label className="label">
                         <span className="footer-title">
                             Sign Up To Our Newsletter!
@@ -19,7 +19,7 @@ export const Footer = () => {
                         <input
                             type="text"
                             placeholder="username@site.com"
-                            className="input-bordered input w-full pr-32"
+                            className="input-bordered input w-full pr-28"
                         />
                         <button className="btn-primary btn absolute top-0 right-0 rounded-l-none">
                             Subscribe
