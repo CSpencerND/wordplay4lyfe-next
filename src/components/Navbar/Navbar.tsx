@@ -4,8 +4,8 @@ import Cart from "./Cart"
 import Account from "./Account"
 import { Twirl as Hamburger } from "hamburger-react"
 
-import logo from "~/static/julee-gradient.svg"
-// import logo from "~/static/comforter-gradient.svg"
+// import logo from "~/static/julee-gradient.svg"
+import logo from "~/static/comforter-gradient.webp"
 
 type Props = { toggled: boolean }
 export const Navbar = ({ toggled }: Props) => {

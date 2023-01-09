@@ -1,7 +1,9 @@
 import { Instagram, Twitter, Facebook } from "react-feather"
 import Link from "next/link"
 import Image from "next/image"
-import logo from "~/static/julee-gradient.svg"
+
+// import logo from "~/static/julee-gradient.webp"
+import logo from "~/static/comforter-gradient.webp"
 
 export const Footer = () => {
     return (
@@ -44,9 +46,9 @@ export const Footer = () => {
                     </ul>
                 </div>
             </footer>
-            <footer className="footer border-t border-base-300 px-10 pt-6 max-md:footer-center">
+            <footer className="footer border-t border-base-300 px-10 pt-6 max-md:footer-center md:pb-6">
                 <div className="grid-flow-col items-center">
-                    <Image src={logo} alt="wordplay4lyfe" className="!bg-transparent !shadow-none pt-2" />
+                    <Image src={logo} alt="wordplay4lyfe" className="!bg-transparent !shadow-none pt-2 w-32" />
                     <p>Copyright © 2022 - All right reserved wordplay4lyfe</p>
                 </div>
                 <div className="md:place-self-center md:self-end md:justify-self-end">
