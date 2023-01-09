@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -25,12 +26,16 @@
 }
 
 * {
-    /* font-family: Karla, Arial, Helvetica, sans-serif; */
-    /* font-family: Lato, Arial, Helvetica, sans-serif; */
-    font-family: Merienda, Arial, Helvetica, sans-serif;
-    /* font-family: Julee, Arial, Helvetica, sans-serif; */
-    /* font-family: Rancho, Arial, Helvetica, sans-serif; */
-    /* font-family: Poppins, Arial, Helvetica, sans-serif; */
+    /* font-family: Karla,  Poppins, Helvetica,Arial,  sans-serif; */
+    font-family: Merienda,  Poppins, Helvetica,Arial,  sans-serif;
+    /* font-family: Lato,   Poppins,  Helvetica,Arial,  sans-serif; */
+    /* font-family: Julee,  Poppins, Helvetica,Arial,  sans-serif; */
+
+    /* font-family: Rancho, Poppins, Helvetica,Arial,  sans-serif; */
+    /* letter-spacing: .15ch; */
+    /* font-size: 1.5rem; */
+
+    /* font-family:         Poppins, Helvetica,Arial,  sans-serif; */
 }
 
 html,

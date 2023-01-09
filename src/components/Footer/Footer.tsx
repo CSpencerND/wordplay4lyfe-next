@@ -19,7 +19,7 @@ export const Footer = () => {
                         <input
                             type="text"
                             placeholder="username@site.com"
-                            className="input-bordered input w-full pr-16"
+                            className="input-bordered input w-full pr-32"
                         />
                         <button className="btn-primary btn absolute top-0 right-0 rounded-l-none">
                             Subscribe
