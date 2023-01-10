@@ -13,7 +13,7 @@ export const Showcase = () => {
     })
 
     return (
-        <div className="wrapper">
+        <div className="">
             <div className="card">
                 <h2 className="py-6 text-center font-semibold text-accent">
                     Fresh Summer Drip

@@ -8,9 +8,9 @@ import { Gallery } from "~/components/Gallery"
 
 const Home: NextPage = () => {
     return (
-        <main>
+        <main className="md:wrapper">
             <section id="hero" className="pt-6">
-                <div className="wrapper hero">
+                <div className="hero">
                     <figure className="aspect-video w-full">
                         <Image
                             className={`aspect-video w-full object-cover object-top`}
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
             </section>
 
             <section id="mission">
-                <div className="wrapper card lg:card-side">
+                <div className="card lg:card-side">
                     {/* <figure className="pt-6 pl-6 max-lg:pr-6 lg:w-1/3 lg:pb-6"> */}
                     {/*     <Image */}
                     {/*         className="h-full w-full opacity-90" */}
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
             </section>
 
             <section id="gallery" className="pb-6">
-                <div className="wrapper">
+                <div className="">
                     <Gallery />
                 </div>
             </section>

@@ -13,19 +13,19 @@ export const SideBar = ({ handleClick }: { handleClick: () => void }) => {
                 </li>
                 {/* <li className="menu-title"><span>Collections</span></li> */}
                 <li>
-                    <Link href="">Summer Collection</Link>
+                    <Link href="/collections/summer">Summer 2022</Link>
                 </li>
                 <li>
-                    <Link href="">Staff Picks</Link>
+                    <Link href="/collection/staff-picks">Staff Picks</Link>
                 </li>
                 <li>
-                    <Link href="">Mindset Tees</Link>
+                    <Link href="/collections/mindset">Mindset Tees</Link>
                 </li>
                 <li>
-                    <Link href="">Creative Minds</Link>
+                    <Link href="/collections/creative">Creative Minds</Link>
                 </li>
                 <li>
-                    <Link href="">Lifestyle Tess</Link>
+                    <Link href="/collections/lifestyle">Lifestyle Tess</Link>
                 </li>
             </ul>
         </div>

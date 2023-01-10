@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 export const useImageImports = (
     imageImports: ImageData[],
-    props: {
+    props?: {
         className?: string
         role?: string
         onDragStart?: React.DragEventHandler
@@ -25,9 +25,9 @@ export const useImageImports = (
                     blurDataURL={blurDataURL}
                     placeholder="blur"
                     /** Optional Params */
-                    className={props.className}
-                    role={props.role}
-                    onDragStart={props.onDragStart}
+                    className={props?.className}
+                    role={props?.role}
+                    onDragStart={props?.onDragStart}
                 />
             )
         })

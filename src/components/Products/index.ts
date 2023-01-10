@@ -1,3 +1,2 @@
-export { ProductGrid } from "./ProductGrid"
+export { ProductGrid, ProductPreview, CollectionPreview } from "./ProductGrid"
 export { ProductFocus } from "./ProductFocus"
-export { ProductPreview, CollectionPreview } from "./ProductPreview"

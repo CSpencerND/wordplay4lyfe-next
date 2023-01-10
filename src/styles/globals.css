@@ -104,7 +104,7 @@ header,
     @apply rounded-box;
 }
 
-img {
+img:not(.product-image) {
     @apply rounded-xl;
 }
 
