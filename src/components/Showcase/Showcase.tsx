@@ -7,7 +7,7 @@ import { useImageImports } from "~/utils"
 
 export const Showcase = () => {
     const images = useImageImports(imageImports, {
-        className: "carousel-image",
+        className: "carousel-image mb-1",
         role: "presentation",
         onDragStart: (e) => e.preventDefault(),
     })
@@ -47,7 +47,7 @@ export const Showcase = () => {
                     // renderNextButton={nextButton}
                 />
                 <div className="mx-auto py-6">
-                    <Link href="/" className="btn-info btn">
+                    <Link href="/collections/summer" className="btn-info btn">
                         See More
                     </Link>
                 </div>

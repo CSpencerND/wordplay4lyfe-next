@@ -123,5 +123,9 @@ section {
 
 /** Miscellaneous */
 img:not(#logo) {
-    @apply bg-base-content shadow-md shadow-black/50;
+    @apply bg-gradient-to-t from-base-content/25 to-base-content shadow-md shadow-black/50;
 }
+/* img:not(#logo) { */
+/*     @apply bg-base-content shadow-md shadow-black/50; */
+/* } */
+

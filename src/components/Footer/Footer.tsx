@@ -48,7 +48,7 @@ export const Footer = () => {
             </footer>
             <footer className="footer border-t border-base-300 px-10 pt-6 max-md:footer-center md:pb-6">
                 <div className="grid-flow-col items-center">
-                    <Image src={logo} alt="wordplay4lyfe" className="!bg-transparent !shadow-none pt-2 w-32" />
+                    <Image src={logo} alt="wordplay4lyfe" className="pt-2 w-32" id="logo" />
                     <p>Copyright © 2022 - All right reserved wordplay4lyfe</p>
                 </div>
                 <div className="md:place-self-center md:self-end md:justify-self-end">
