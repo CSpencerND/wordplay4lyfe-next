@@ -1,5 +1,5 @@
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
 import { Children, PreviewProps } from "~/types"
 
 export const CollectionPreview = ({ src, title, href }: PreviewProps) => {
@@ -19,21 +19,9 @@ export const CollectionPreview = ({ src, title, href }: PreviewProps) => {
     )
 }
 
-export const ProductPreview = ({ children }: Children) => {
-    return (
-        <li className="card">
-            <figure>{children}</figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    Shirts!
-                    <div className="badge-secondary badge">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <div className="badge-outline badge">Fashion</div>
-                    <div className="badge-outline badge">Products</div>
-                </div>
-            </div>
-        </li>
-    )
+export default function ProductGrid({ children }: Children) {
+    return <ul className="layout-grid">{children}</ul>
 }
+
+export { ProductPreview } from "./ProductGrid"
+export { ProductFocus } from "./ProductFocus"

@@ -9,8 +9,8 @@ export const useImageImports = (
         role?: string
         onDragStart?: React.DragEventHandler
     }
-): React.ReactNode[] => {
-    const [images, setImages] = useState<React.ReactNode[]>([])
+): React.ReactElement[] => {
+    const [images, setImages] = useState<React.ReactElement[]>([])
     useEffect(() => {
         const imageData = imageImports.map((data, i) => {
             const { src, alt, width, height, blurDataURL }: ImageData = data

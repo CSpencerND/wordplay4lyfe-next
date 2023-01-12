@@ -1,5 +1,5 @@
 import { type NextPage } from "next"
-import { ProductGrid, CollectionPreview } from "~/components/Products"
+import ProductGrid, { CollectionPreview } from "~/components/Products"
 
 import { yumyumtee1 } from "~/static/collections/summer"
 import { tvpopculturetee10 } from "~/static/collections/lifestyle"
