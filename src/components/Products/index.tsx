@@ -2,6 +2,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { Children, PreviewProps } from "~/types"
 
+interface LiChildren {
+    children: React.ReactElement<HTMLLIElement>[]
+}
+export default function ProductGrid({ children }: LiChildren) {
+    return <ul className="layout-grid">{children}</ul>
+}
+
 export const CollectionPreview = ({ src, title, href }: PreviewProps) => {
     return (
         <li className="transition-all active:scale-95">
@@ -19,9 +26,4 @@ export const CollectionPreview = ({ src, title, href }: PreviewProps) => {
     )
 }
 
-export default function ProductGrid({ children }: Children) {
-    return <ul className="layout-grid">{children}</ul>
-}
-
-export { ProductPreview } from "./ProductGrid"
-export { ProductFocus } from "./ProductFocus"
+export { ProductsList, ProductPreview } from "./Product"
