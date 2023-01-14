@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react"
 import groupBy from "lodash/groupBy"
-import startCase from "lodash/startCase"
 import { ProductPreview } from "~/components/Products"
 
 export function useProductImages(images: JSX.Element[]) {
     const [productImages, setProductImages] = useState<JSX.Element[]>([])
 
     useEffect(() => {
-        const groupedImages = groupBy(images, (image: JSX.Element) => {
-            return startCase(image.props.alt).replace("Tee", "")
-        })
+        const groupedImages = groupBy(
+            images,
+            (image: JSX.Element) => image.props.alt
+        )
         const groupedImagesArray = Object.entries(groupedImages)
 
         const productPreviews = groupedImagesArray.map((product) => {
