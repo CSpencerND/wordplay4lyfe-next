@@ -1,19 +1,10 @@
-import imageImports from "~/static/collections/summer"
-import { useImageImports } from "~/utils/useImageImports"
-import ProductGrid from "~/components/Products"
-import { useProductImages } from "~/utils"
+import { SummerProducts } from "~/components/Products"
 
 const SummerCollection = () => {
-    const images: JSX.Element[] = useImageImports(imageImports, {
-        className: "product-image",
-    })
-
-    const products: JSX.Element[] = useProductImages(images)
-
     return (
         <main className="md:wrapper">
             <section className="pt-6">
-                <ProductGrid>{products}</ProductGrid>
+                <SummerProducts />
             </section>
         </main>
     )

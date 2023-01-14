@@ -13,7 +13,7 @@ const Home: NextPage = () => {
                 <div className="hero">
                     <figure className="w-full">
                         <Image
-                            className={`aspect-video w-full object-cover object-top dynamic-height`}
+                            className={`dynamic-height aspect-video w-full object-cover object-top`}
                             src={hero}
                             alt="Man standing in front of graffiti"
                             placeholder="blur"
@@ -74,9 +74,7 @@ const Home: NextPage = () => {
             </section>
 
             <section id="gallery" className="pb-6">
-                <div className="">
-                    <Gallery />
-                </div>
+                <Gallery />
             </section>
         </main>
     )
