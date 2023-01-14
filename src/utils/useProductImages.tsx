@@ -11,8 +11,8 @@ export function useProductImages(images: JSX.Element[]) {
         )
         const groupedImagesArray = Object.entries(groupedImages)
 
-        const productPreviews = groupedImagesArray.map((product) => {
-            return <ProductPreview product={product} />
+        const productPreviews = groupedImagesArray.map((product, i) => {
+            return <ProductPreview product={product} key={product[1][0].key} />
         })
 
         setProductImages(productPreviews)
