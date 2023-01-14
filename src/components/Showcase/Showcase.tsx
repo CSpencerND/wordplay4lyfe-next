@@ -47,7 +47,7 @@ export const Showcase = () => {
                     // renderNextButton={nextButton}
                 />
                 <div className="mx-auto py-6">
-                    <Link href="/collections/summer" className="btn-info btn">
+                    <Link href="/collections/summer-22" className="btn-info btn">
                         See More
                     </Link>
                 </div>

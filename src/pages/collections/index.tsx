@@ -15,7 +15,7 @@ const Collections: NextPage = () => {
                     <CollectionPreview
                         src={yumyumtee1}
                         title="Summer '22"
-                        href="/collections/summer"
+                        href="/collections/summer-22"
                     />
                     <CollectionPreview
                         src={tvpopculturetee10}
@@ -30,7 +30,7 @@ const Collections: NextPage = () => {
                     <CollectionPreview
                         src={unisexjerseyshortsleevetee10}
                         title="Creative"
-                        href="/collections/creative"
+                        href="/collections/creative-minds"
                     />
                     <CollectionPreview
                         src={facesofchangetee10}
