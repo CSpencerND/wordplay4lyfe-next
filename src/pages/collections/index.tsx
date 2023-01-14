@@ -1,5 +1,5 @@
 import { type NextPage } from "next"
-import ProductGrid, { CollectionPreview } from "~/components/Products"
+import { CollectionGrid, CollectionPreview } from "~/components/Products"
 
 import { yumyumtee1 } from "~/static/collections/summer"
 import { tvpopculturetee10 } from "~/static/collections/lifestyle"
@@ -11,7 +11,7 @@ const Collections: NextPage = () => {
     return (
         <main className="md:wrapper">
             <section className="pt-6">
-                <ProductGrid>
+                <CollectionGrid>
                     <CollectionPreview
                         src={yumyumtee1}
                         title="Summer '22"
@@ -37,7 +37,7 @@ const Collections: NextPage = () => {
                         title="Staff Picks"
                         href="/collections/staff-picks"
                     />
-                </ProductGrid>
+                </CollectionGrid>
             </section>
         </main>
     )
