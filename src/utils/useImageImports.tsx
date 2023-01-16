@@ -2,17 +2,21 @@ import Image from "next/image"
 import { ImageData } from "~/types"
 import { useEffect, useState } from "react"
 
-export const useImageImports = (
-    imageImports: ImageData[],
-    props?: {
-        className?: string
-        role?: string
-        onDragStart?: React.DragEventHandler
-    }
-): JSX.Element[] => {
+interface Props {
+    className?: string
+    role?: string
+    onDragStart?: React.DragEventHandler
+}
+/**
+ * @param imageImports Array of ImageData
+ * @param props Optional object of className, role, onDragStart
+ *
+ * @returns Array of NextJS <Image /> components
+ */
+export const useImageImports = (imageImports: ImageData[], props?: Props): JSX.Element[] => {
     const [images, setImages] = useState<JSX.Element[]>([])
     useEffect(() => {
-        const imageData = imageImports.map((data, i) => {
+        const imageData = imageImports.map((data) => {
             const { src, alt, width, height, blurDataURL, id }: ImageData = data
 
             return (
