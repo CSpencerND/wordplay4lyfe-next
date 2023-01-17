@@ -4,7 +4,7 @@ export const SideBar = ({ handleClick }: { handleClick: () => void }) => {
     return (
         <div className="drawer-side mt-[5rem]" onClick={handleClick}>
             <label className="drawer-overlay !cursor-default"></label>
-            <ul className="menu w-64 p-4 md:w-80">
+            <ul className="menu p-4 w-max text-base whitespace-nowrap">
                 <li>
                     <Link href="/">Home</Link>
                 </li>

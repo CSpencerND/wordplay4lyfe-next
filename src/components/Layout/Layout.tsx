@@ -20,7 +20,7 @@ export const Layout = ({ children }: Props) => {
 
     return (
         <>
-            <div className="drawer">
+            <div className="drawer-mobile drawer">
                 <input
                     onClick={() => setChecked(true)}
                     onChange={handleChange}
@@ -34,7 +34,7 @@ export const Layout = ({ children }: Props) => {
                 {/** Main Content */}
                 <div className="drawer-content flex flex-col">
                     <Navbar toggled={isChecked} />
-                    {children}
+                    <div className="mt-20">{children}</div>
                     <Footer />
                 </div>
 

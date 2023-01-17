@@ -13,7 +13,7 @@ export const ProductPreview = ({ product }: ProductProps) => {
         <li className="card" key={product[1][0].key}>
             <figure>{image}</figure>
             <div className="card-body p-4">
-                <h2 className="card-title !text-xs sm:!text-base">
+                <h2 className="font-bold text-xs sm:text-sm">
                     {product[0]}
                 </h2>
             </div>

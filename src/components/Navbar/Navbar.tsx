@@ -10,14 +10,14 @@ import logo from "~/static/comforter-gradient.webp"
 type Props = { toggled: boolean }
 export const Navbar = ({ toggled }: Props) => {
     return (
-        <header className="sticky top-0 z-50">
-            <nav className="navbar p-3 lg:container lg:mx-auto">
+        <header className="top-0 z-50 !w-full absolute lg:translate-x-[-300px]">
+            <nav className="navbar p-3 md:px-6 !w-full">
                 {/* Left Side */}
                 <div className="flex-1 gap-3">
                     {/** Hamburger **/}
                     <label
                         htmlFor="sidebar"
-                        className="btn-ghost drawer-button btn-circle btn"
+                        className="btn-ghost drawer-button btn-circle btn lg:hidden"
                         aria-labelledby="menuButtonText"
                     >
                         <Hamburger
