@@ -1,11 +1,11 @@
 import { Children } from "~/types"
 
 export default function ProductGrid({ children }: Children) {
-    return <ul className="std-grid-lg max-[1920px]:max-w-screen-lg mx-auto">{children}</ul>
+    return <ul className="std-grid-lg">{children}</ul>
 }
 
 export function CollectionGrid({ children }: Children) {
-    return <ul className="std-grid-md max-[1920px]:max-w-screen-lg mx-auto">{children}</ul>
+    return <ul className="std-grid-md">{children}</ul>
 }
 
 export { CollectionPreview, ProductPreview } from "./ProductBase"

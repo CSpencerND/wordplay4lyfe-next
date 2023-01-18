@@ -5,13 +5,8 @@
 @import url("/public/Inter/Inter-VariableFont_slnt\,wght.ttf");
 
 @layer utilities {
-    .wrapper {
+    .std-wrapper {
         @apply container mx-auto;
-    }
-
-    .dynamic-height {
-        max-height: 85dvh !important;
-        @apply transition-height;
     }
 
     .std-grid-md {
@@ -21,6 +16,11 @@
     .std-grid-lg {                                                          
         @apply grid gap-3 sm:gap-6 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
     }                                                                       
+
+    .dynamic-height {
+        max-height: 85dvh !important;
+        @apply transition-height;
+    }
 
     .dark-to-light {
         @apply bg-gradient-to-b from-base-300 via-base-100 bg-base-content;

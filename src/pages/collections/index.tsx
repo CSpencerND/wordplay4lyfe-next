@@ -9,37 +9,35 @@ import { facesofchangetee10 } from "~/static/collections/staff"
 
 const Collections: NextPage = () => {
     return (
-        <main className="md:wrapper">
-            <section className="pt-6">
-                <CollectionGrid>
-                    <CollectionPreview
-                        src={yumyumtee1}
-                        title="Summer '22"
-                        href="/collections/summer-22"
-                    />
-                    <CollectionPreview
-                        src={tvpopculturetee10}
-                        title="Lifestyle"
-                        href="/collections/lifestyle"
-                    />
-                    <CollectionPreview
-                        src={mensshortsleevetee11}
-                        title="Mindset"
-                        href="/collections/mindset"
-                    />
-                    <CollectionPreview
-                        src={unisexjerseyshortsleevetee10}
-                        title="Creative"
-                        href="/collections/creative-minds"
-                    />
-                    <CollectionPreview
-                        src={facesofchangetee10}
-                        title="Staff Picks"
-                        href="/collections/staff-picks"
-                    />
-                </CollectionGrid>
-            </section>
-        </main>
+        <section className="pt-6">
+            <CollectionGrid>
+                <CollectionPreview
+                    src={yumyumtee1}
+                    title="Summer '22"
+                    href="/collections/summer-22"
+                />
+                <CollectionPreview
+                    src={tvpopculturetee10}
+                    title="Lifestyle"
+                    href="/collections/lifestyle"
+                />
+                <CollectionPreview
+                    src={mensshortsleevetee11}
+                    title="Mindset"
+                    href="/collections/mindset"
+                />
+                <CollectionPreview
+                    src={unisexjerseyshortsleevetee10}
+                    title="Creative"
+                    href="/collections/creative-minds"
+                />
+                <CollectionPreview
+                    src={facesofchangetee10}
+                    title="Staff Picks"
+                    href="/collections/staff-picks"
+                />
+            </CollectionGrid>
+        </section>
     )
 }
 

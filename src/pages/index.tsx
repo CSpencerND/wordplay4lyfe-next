@@ -8,7 +8,7 @@ import { Gallery } from "~/components/Gallery"
 
 const Home: NextPage = () => {
     return (
-        <main className="md:wrapper">
+        <>
             <section id="hero" className="pt-6">
                 <div className="hero">
                     <figure className="w-full">
@@ -48,26 +48,21 @@ const Home: NextPage = () => {
                     {/*     /> */}
                     {/* </figure> */}
                     <article className="card-body lg:w-2/3">
-                        <h2 className="card-title whitespace-nowrap">
-                            Why we love what we do
-                        </h2>
+                        <h2 className="card-title whitespace-nowrap">Why we love what we do</h2>
                         <p>
-                            When we think about WORDPLAY4LYFE, what comes to
-                            mind is Artistic Expression - being able to express
-                            yourself freely and not be judged. We use
-                            our Imagination because the fact that you can come
-                            up with different ideas for something that&apos;s
-                            yours is just amazing. The fact that you can
-                            daydream about those different ideas and bring them
-                            to life is really exciting, which is an excellent
-                            way to share my Creativeness with the rest of the
-                            world. We want WORDPLAY4LYFE to represent Culture in
-                            all walks of life because without culture there is
-                            no WORDPLAY4LYFE.
+                            When we think about WORDPLAY4LYFE, what comes to mind is Artistic
+                            Expression - being able to express yourself freely and not be
+                            judged. We use our Imagination because the fact that you can come up
+                            with different ideas for something that&apos;s yours is just
+                            amazing. The fact that you can daydream about those different ideas
+                            and bring them to life is really exciting, which is an excellent way
+                            to share my Creativeness with the rest of the world. We want
+                            WORDPLAY4LYFE to represent Culture in all walks of life because
+                            without culture there is no WORDPLAY4LYFE.
                         </p>
                         <p>
-                            Artistic Expression, Imagination, Creativeness and
-                            Culture represents our brand. (AEICC)
+                            Artistic Expression, Imagination, Creativeness and Culture
+                            represents our brand. (AEICC)
                         </p>
                     </article>
                 </div>
@@ -76,7 +71,7 @@ const Home: NextPage = () => {
             <section id="gallery" className="pb-6">
                 <Gallery />
             </section>
-        </main>
+        </>
     )
 }
 

@@ -34,7 +34,7 @@ export const Layout = ({ children }: Props) => {
                 {/** Main Content */}
                 <div className="drawer-content flex flex-col">
                     <Navbar toggled={isChecked} />
-                    <div className="mt-20">{children}</div>
+                    <main className="std-wrapper mt-20">{children}</main>
                     <Footer />
                 </div>
 
