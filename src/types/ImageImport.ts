@@ -1,9 +1,9 @@
 import { StaticImageData } from "next/image"
-interface ImageData extends StaticImageData {
+
+export interface ImageData extends StaticImageData {
     alt?: string | undefined
     id?: number | undefined
+    color?: string | undefined
 }
 
-type ImageImport = [ImageData, string]
-export default ImageImport
-export { type ImageData }
+export type ImageImport = [ImageData, string, string?]
