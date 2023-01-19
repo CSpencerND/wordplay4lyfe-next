@@ -23,35 +23,37 @@ import yumyumtee1 from "./yum-yum-tee1.webp"
 import { summer } from "./summer22"
 
 const initialImports: ImageImport[] = [
-    [cottoncandytee0, "cottoncandytee0"],
-    [cottoncandytee1, "cottoncandytee1"],
-    [icecreamtee0, "icecreamtee0"],
-    [icecreamtee1, "icecreamtee1"],
-    [itswhatevertee0, "itswhatevertee0"],
-    [milkshaketee0, "milkshaketee0"],
-    [milkshaketee1, "milkshaketee1"],
-    [milkshaketee2, "milkshaketee2"],
-    [popittee0, "popittee0"],
-    [popittee1, "popittee1"],
-    [queendrip0, "queendrip0"],
-    [queendrip1, "queendrip1"],
-    [saylesstee10, "saylesstee10"],
-    [saylesstee11, "saylesstee11"],
-    [strawberrycaketee0, "strawberrycaketee0"],
-    [strawberrycaketee1, "strawberrycaketee1"],
-    [tastetherainbowtee0, "tastetherainbowtee0"],
-    [tastetherainbowtee1, "tastetherainbowtee1"],
-    [yumyumtee0, "yumyumtee0"],
-    [yumyumtee1, "yumyumtee1"],
+    [cottoncandytee0, "cottoncandytee0", "white"],
+    [cottoncandytee1, "cottoncandytee1", "black"],
+    [icecreamtee0, "icecreamtee0", "white"],
+    [icecreamtee1, "icecreamtee1", "blue"],
+    [itswhatevertee0, "itswhatevertee0", "black"],
+    [milkshaketee0, "milkshaketee0", "red"],
+    [milkshaketee1, "milkshaketee1", "black"],
+    [milkshaketee2, "milkshaketee2", "white"],
+    [popittee0, "popittee0", "white"],
+    [popittee1, "popittee1", "black"],
+    [queendrip0, "queendrip0", "navy"],
+    [queendrip1, "queendrip1", "white"],
+    [saylesstee10, "saylesstee10", "black"],
+    [saylesstee11, "saylesstee11", "white"],
+    [strawberrycaketee0, "strawberrycaketee0", "white"],
+    [strawberrycaketee1, "strawberrycaketee1", "black"],
+    [tastetherainbowtee0, "tastetherainbowtee0", "white"],
+    [tastetherainbowtee1, "tastetherainbowtee1", "black"],
+    [yumyumtee0, "yumyumtee0", "white"],
+    [yumyumtee1, "yumyumtee1", "black"],
 ]
 
 const imageImports: ImageData[] = []
 
 initialImports.forEach((imageImport) => {
     const imageData = imageImport[0]
-    const alt: string = imageImport[1]
+    const alt = imageImport[1]
+    const color = imageImport[2]
 
     imageData.alt = alt
+    imageData.color = color
     imageImports.push(imageData)
 })
 

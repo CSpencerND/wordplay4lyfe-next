@@ -19,22 +19,22 @@ import unisexjerseyshortsleevetee31 from "./unisex-jersey-short-sleeve-tee-31.we
 import { lifestyle } from "./lifestyle"
 
 const initialImports: ImageImport[] = [
-    [mensshortsleevetee0, "mensshortsleevetee0"],
-    [mongul10, "mongul10"],
-    [nocap10, "nocap10"],
-    [powerinnumberstee10, "powerinnumberstee10"],
-    [queen10, "queen10"],
-    [queen11, "queen11"],
-    [queen12, "queen12"],
-    [queen13, "queen13"],
-    [tacosvsrelationshipstee10, "tacosvsrelationshipstee10"],
-    [tvpopculturetee10, "tvpopculturetee10"],
-    [unisexheavycottontee10, "unisexheavycottontee10"],
-    [unisexheavycottontee11, "unisexheavycottontee11"],
-    [unisexheavycottontee20, "unisexheavycottontee20"],
-    [unisexheavycottontee30, "unisexheavycottontee30"],
-    [unisexjerseyshortsleevetee30, "unisexjerseyshortsleevetee30"],
-    [unisexjerseyshortsleevetee31, "unisexjerseyshortsleevetee31"],
+    [mensshortsleevetee0, "mensshortsleevetee0", "white"],
+    [mongul10, "mongul10", "white"],
+    [nocap10, "nocap10", "black"],
+    [powerinnumberstee10, "powerinnumberstee10", "white"],
+    [queen10, "queen10", "black"],
+    [queen11, "queen11", "white"],
+    [queen12, "queen12", "pink"],
+    [queen13, "queen13", "red"],
+    [tacosvsrelationshipstee10, "tacosvsrelationshipstee10", "black"],
+    [tvpopculturetee10, "tvpopculturetee10", "black"],
+    [unisexheavycottontee10, "unisexheavycottontee10", "black"],
+    [unisexheavycottontee11, "unisexheavycottontee11", "white"],
+    [unisexheavycottontee20, "unisexheavycottontee20", "black"],
+    [unisexheavycottontee30, "unisexheavycottontee30", "white"],
+    [unisexjerseyshortsleevetee30, "unisexjerseyshortsleevetee30", "white"],
+    [unisexjerseyshortsleevetee31, "unisexjerseyshortsleevetee31", "black"],
 ]
 
 const imageImports: ImageData[] = []

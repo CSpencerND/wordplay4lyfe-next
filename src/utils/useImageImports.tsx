@@ -17,7 +17,7 @@ export const useImageImports = (imageImports: ImageData[], props?: Props): JSX.E
     const [images, setImages] = useState<JSX.Element[]>([])
     useEffect(() => {
         const imageData = imageImports.map((data) => {
-            const { src, alt, width, height, blurDataURL, id }: ImageData = data
+            const { src, alt, width, height, blurDataURL, id, color }: ImageData = data
 
             return (
                 <Image
@@ -32,6 +32,7 @@ export const useImageImports = (imageImports: ImageData[], props?: Props): JSX.E
                     className={props?.className}
                     role={props?.role}
                     onDragStart={props?.onDragStart}
+                    color={color}
                 />
             )
         })

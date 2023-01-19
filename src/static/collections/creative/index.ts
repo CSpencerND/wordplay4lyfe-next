@@ -12,15 +12,15 @@ import womenstheboyfriendtee0 from "./womens-the-boyfriend-tee0.webp"
 import { creative } from "./creativeMinds"
 
 const initialImports: ImageImport[] = [
-    [creativityiscontagious10, "creativityiscontagious10"],
-    [keepthemusicplaying10, "keepthemusicplaying10"],
-    [popstartee10, "popstartee10"],
-    [popstartee11, "popstartee11"],
-    [unisexjerseyshortsleevetee10, "unisexjerseyshortsleevetee10"],
-    [unisexjerseyshortsleevetee0, "unisexjerseyshortsleevetee0"],
-    [unisexjerseyshortsleevetee1, "unisexjerseyshortsleevetee1"],
-    [womenssoftstyletee0, "womenssoftstyletee0"],
-    [womenstheboyfriendtee0, "womenstheboyfriendtee0"],
+    [creativityiscontagious10, "creativityiscontagious10", "white"],
+    [keepthemusicplaying10, "keepthemusicplaying10", "white"],
+    [popstartee10, "popstartee10", "black"],
+    [popstartee11, "popstartee11", "brown"],
+    [unisexjerseyshortsleevetee10, "unisexjerseyshortsleevetee10", "navy"],
+    [unisexjerseyshortsleevetee0, "unisexjerseyshortsleevetee0", "light blue"],
+    [unisexjerseyshortsleevetee1, "unisexjerseyshortsleevetee1", "white"],
+    [womenssoftstyletee0, "womenssoftstyletee0", "white"],
+    [womenstheboyfriendtee0, "womenstheboyfriendtee0", "black"],
 ]
 
 const imageImports: ImageData[] = []
