@@ -30,9 +30,6 @@ module.exports = {
                 height: "height",
                 spacing: "margin, padding",
             },
-            screens: {
-                xs: "375px",
-            },
         },
     },
     plugins: [require("daisyui"), require("@tailwindcss/typography")],

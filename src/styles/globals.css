@@ -10,11 +10,11 @@
     }
 
     .std-grid-md {
-        @apply grid gap-3 sm:gap-6 grid-cols-1 xs:grid-cols-2 md:grid-cols-3;
-    }                                                                       
+        @apply grid gap-3 sm:gap-6 grid-cols-2 md:grid-cols-3;
+    }                                                        
 
-    .std-grid-lg {                                                          
-        @apply grid gap-3 sm:gap-6 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+    .std-grid-lg {                                           
+        @apply grid gap-3 sm:gap-6 grid-cols-2 md:grid-cols-3 2xl:grid-cols-4;
     }                                                                       
 
     .dynamic-height {
@@ -68,7 +68,7 @@ html,
 body,
 header,
 .drawer-side > .menu {
-    @apply bg-base-200;
+    @apply bg-base-300;
 }
 
 .menu,
@@ -89,9 +89,12 @@ header, .drawer-side > .menu {
 header,
 .hero,
 .card,
-.menu,
-.drawer-side {
+.menu {
     @apply shadow-lg shadow-black/50;
+}
+
+.drawer-side {
+    @apply shadow-box shadow-black/50;
 }
 
 /** Rounded Corners */
