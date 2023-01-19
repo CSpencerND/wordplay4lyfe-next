@@ -11,7 +11,12 @@ export function useProductImages(images: JSX.Element[]): JSX.Element[] {
     const [productImages, setProductImages] = useState<JSX.Element[]>([])
 
     useEffect(() => {
-        const groupedImages = groupBy(images, (image: JSX.Element) => image.props.alt)
+        const groupedImages = groupBy(images, (image: JSX.Element) =>
+            image.props.alt
+                .replace(/tee/gi, "")
+                // .replace("IF IT AINT A 2PIECE", "")
+                // .replace("I <3", "")
+        )
         const groupedImagesArray = Object.entries(groupedImages)
 
         const productPreviews = groupedImagesArray.map((product) => {
