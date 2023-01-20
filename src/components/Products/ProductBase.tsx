@@ -25,7 +25,7 @@ export const ProductPreview = ({ product }: { product: ProductData }) => {
                     {product[0]}
                 </h2>
                 <div className="flex justify-between">
-                    <p className="text-sm opacity-75">$27.00</p>
+                    <p className="-translate-y-0.5 text-sm opacity-75">$27</p>
                     {Buttons(imagesLength, product[1])}
                 </div>
             </div>
@@ -59,47 +59,35 @@ export const CollectionGrid = ({ children }: Children) => {
 }
 
 function Buttons(imagesLength: number, productImages: JSX.Element[]): JSX.Element | null {
-    const btnClass = "btn-outline btn h-5 w-5 p-0 min-h-[0] rounded-[5px]"
-
     const colors = productImages.map((image) => {
         return image.props.color
     })
 
+    const swatch = productImages[0].key as string
+
     switch (imagesLength) {
         case 1:
             return (
-                <ul className="flex items-end">
-                    <li>
-                        <button className={btnClass} data-color={colors[0]} />
-                    </li>
-                </ul>
+                <span className="grid grid-cols-3 gap-1">
+                    <input type="radio" name={swatch} data-color={colors[0]} />
+                </span>
             )
 
         case 2:
             return (
-                <ul className="flex items-end gap-1">
-                    <li>
-                        <button className={btnClass} data-color={colors[0]} />
-                    </li>
-                    <li>
-                        <button className={btnClass} data-color={colors[1]} />
-                    </li>
-                </ul>
+                <span className="grid grid-cols-3 gap-1">
+                    <input type="radio" name={swatch} data-color={colors[0]} />
+                    <input type="radio" name={swatch} data-color={colors[1]} />
+                </span>
             )
 
         case 3:
             return (
-                <ul className="flex items-end gap-1">
-                    <li>
-                        <button className={btnClass} data-color={colors[0]} />
-                    </li>
-                    <li>
-                        <button className={btnClass} data-color={colors[1]} />
-                    </li>
-                    <li>
-                        <button className={btnClass} data-color={colors[2]} />
-                    </li>
-                </ul>
+                <span className="grid grid-cols-3 gap-1">
+                    <input type="radio" name={swatch} data-color={colors[0]} />
+                    <input type="radio" name={swatch} data-color={colors[1]} />
+                    <input type="radio" name={swatch} data-color={colors[2]} />
+                </span>
             )
 
         default:

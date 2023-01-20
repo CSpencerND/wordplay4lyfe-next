@@ -13,8 +13,8 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +60 src/components/Products/ProductBase.tsx
-badd +1 ~/Code/wordplay4lyfe-next/src/styles/products.css
+badd +62 src/components/Products/ProductBase.tsx
+badd +16 ~/Code/wordplay4lyfe-next/src/styles/products.css
 argglobal
 %argdel
 $argadd ./
@@ -38,11 +38,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 60 - ((25 * winheight(0) + 27) / 55)
+let s:l = 62 - ((27 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 60
+keepjumps 62
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
