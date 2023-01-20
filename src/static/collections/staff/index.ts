@@ -33,7 +33,7 @@ const initialImports: ImageImport[] = [
     [tvpopculturetee10, "tvpopculturetee10", "black"],
     [unisexheavycottontee20, "unisexheavycottontee20", "black"],
     [unisexjerseyshortsleevetee10, "unisexjerseyshortsleevetee10", "navy"],
-    [unisexjerseyshortsleevetee0, "unisexjerseyshortsleevetee0", "light blue"],
+    [unisexjerseyshortsleevetee0, "unisexjerseyshortsleevetee0", "lightBlue"],
     [unisexjerseyshortsleevetee1, "unisexjerseyshortsleevetee1", "white"],
     [womenssoftstyletee0, "womenssoftstyletee0", "white"],
     [wordplayheartbeattee10, "wordplayheartbeattee10", "white"],

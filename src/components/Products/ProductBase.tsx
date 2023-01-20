@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { PreviewProps, ProductProps, Children } from "~/types"
+import { PreviewProps, ProductData, Children } from "~/types"
 import Image from "next/image"
 import Link from "next/link"
 
 /** TODO: Need to pass product array to button to get colors */
 
-export const ProductPreview = ({ product }: ProductProps) => {
+export const ProductPreview = ({ product }: { product: ProductData }) => {
     const [image, setImage] = useState<JSX.Element>(<h2>Loading Image ...</h2>)
     const [imagesLength, setLength] = useState<number>(0)
 
@@ -26,7 +26,7 @@ export const ProductPreview = ({ product }: ProductProps) => {
                 </h2>
                 <div className="flex justify-between">
                     <p className="text-sm opacity-75">$27.00</p>
-                    {Buttons(imagesLength, image.props.color)}
+                    {Buttons(imagesLength, product[1])}
                 </div>
             </div>
         </li>
@@ -58,17 +58,19 @@ export const CollectionGrid = ({ children }: Children) => {
     return <ul className="std-grid-md">{children}</ul>
 }
 
-function Buttons(imagesLength: number, imageColors: string): JSX.Element | null {
-    const btnClass = "btn-outline btn h-4 w-4 p-0 min-h-[0] rounded-[4px]"
+function Buttons(imagesLength: number, productImages: JSX.Element[]): JSX.Element | null {
+    const btnClass = "btn-outline btn h-5 w-5 p-0 min-h-[0] rounded-[5px]"
 
-    console.log(imageColors)
+    const colors = productImages.map((image) => {
+        return image.props.color
+    })
 
     switch (imagesLength) {
         case 1:
             return (
                 <ul className="flex items-end">
                     <li>
-                        <button className={btnClass} />
+                        <button className={btnClass} data-color={colors[0]} />
                     </li>
                 </ul>
             )
@@ -77,10 +79,10 @@ function Buttons(imagesLength: number, imageColors: string): JSX.Element | null 
             return (
                 <ul className="flex items-end gap-1">
                     <li>
-                        <button className={btnClass} />
+                        <button className={btnClass} data-color={colors[0]} />
                     </li>
                     <li>
-                        <button className={btnClass} />
+                        <button className={btnClass} data-color={colors[1]} />
                     </li>
                 </ul>
             )
@@ -89,13 +91,13 @@ function Buttons(imagesLength: number, imageColors: string): JSX.Element | null 
             return (
                 <ul className="flex items-end gap-1">
                     <li>
-                        <button className={btnClass} />
+                        <button className={btnClass} data-color={colors[0]} />
                     </li>
                     <li>
-                        <button className={btnClass} />
+                        <button className={btnClass} data-color={colors[1]} />
                     </li>
                     <li>
-                        <button className={btnClass} />
+                        <button className={btnClass} data-color={colors[2]} />
                     </li>
                 </ul>
             )

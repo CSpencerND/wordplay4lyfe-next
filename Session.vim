@@ -13,17 +13,21 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 src/components/Products/index.ts
-badd +1 ~/Code/wordplay4lyfe-next/src/components/Products/ProductFocus.tsx
-badd +1 ~/Code/wordplay4lyfe-next/src/components/Products/ProductGrid.tsx
-badd +1 ~/Code/wordplay4lyfe-next/src/components/Products/ProductPreview.tsx
-badd +1 src/pages/collections/index.tsx
+badd +60 src/components/Products/ProductBase.tsx
+badd +1 ~/Code/wordplay4lyfe-next/src/styles/products.css
 argglobal
 %argdel
-$argadd .
-edit src/pages/collections/index.tsx
+$argadd ./
+edit src/components/Products/ProductBase.tsx
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
 argglobal
-balt ~/Code/wordplay4lyfe-next/src/components/Products/ProductPreview.tsx
+balt ~/Code/wordplay4lyfe-next/src/styles/products.css
 setlocal fdm=manual
 setlocal fde=
 setlocal fmr={{{,}}}
@@ -34,11 +38,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 27) / 55)
+let s:l = 60 - ((25 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 60
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
@@ -47,13 +51,16 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
+let g:this_session = v:this_session
+let g:this_obsession = v:this_session
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
