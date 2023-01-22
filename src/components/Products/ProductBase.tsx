@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { PreviewProps, ProductData, Children } from "~/types"
 import Image from "next/image"
 import Link from "next/link"
@@ -7,16 +7,7 @@ import Swatch from "./Swatch"
 /** TODO: Need to pass product array to button to get colors */
 
 export const ProductPreview = ({ product }: { product: ProductData }) => {
-    const [image, setImage] = useState<JSX.Element>(<h2>Loading Image ...</h2>)
-    const [imagesLength, setLength] = useState<number>(0)
-
-    useEffect(() => {
-        const initialImage = product[1][0]
-        const numberOfImages = product[1].length
-
-        setImage(initialImage)
-        setLength(numberOfImages)
-    }, [])
+    const [image, setImage] = useState<JSX.Element>(product[1][0])
 
     return (
         <li className="card" key={image.key}>
@@ -27,11 +18,7 @@ export const ProductPreview = ({ product }: { product: ProductData }) => {
                 </h2>
                 <div className="flex justify-between">
                     <p className="-translate-y-0.5 text-sm opacity-75">$27</p>
-                    <Swatch
-                        imagesLength={imagesLength}
-                        productImages={product[1]}
-                        setImage={setImage}
-                    />
+                    <Swatch productImages={product[1]} setImage={setImage} />
                 </div>
             </div>
         </li>
