@@ -1,8 +1,8 @@
-import imageImports from "~/static/collections/staff"
+import imageImports from "~/static/collections/lifestyle"
 import { useImageImports, useProductImages } from "~/utils"
-import { ProductGrid } from "./"
+import { ProductGrid } from "../"
 
-export const StaffProducts = () => {
+export const LifestyleProducts = () => {
     const images: JSX.Element[] = useImageImports(imageImports, {
         className: "product-image",
     })

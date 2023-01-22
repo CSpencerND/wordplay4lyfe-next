@@ -13,12 +13,12 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +62 src/components/Products/ProductBase.tsx
-badd +16 ~/Code/wordplay4lyfe-next/src/styles/products.css
+badd +32 src/components/Products/ProductBase.tsx
+badd +61 ~/Code/wordplay4lyfe-next/src/components/Products/Swatch.tsx
 argglobal
 %argdel
 $argadd ./
-edit src/components/Products/ProductBase.tsx
+edit ~/Code/wordplay4lyfe-next/src/components/Products/Swatch.tsx
 wincmd t
 let s:save_winminheight = &winminheight
 let s:save_winminwidth = &winminwidth
@@ -27,7 +27,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/Code/wordplay4lyfe-next/src/styles/products.css
+balt src/components/Products/ProductBase.tsx
 setlocal fdm=manual
 setlocal fde=
 setlocal fmr={{{,}}}
@@ -38,12 +38,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 62 - ((27 * winheight(0) + 27) / 55)
+let s:l = 61 - ((54 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 62
-normal! 0
+keepjumps 61
+normal! 065|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -59,6 +59,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 let g:this_session = v:this_session
 let g:this_obsession = v:this_session
 doautoall SessionLoadPost

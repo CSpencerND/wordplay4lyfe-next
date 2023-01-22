@@ -1,26 +1,18 @@
 input[type=radio] {
-    appearance: none;
-    margin: 0;
-    font: inherit;
-    color: currentColor;
-    width: 1.15rem;
-    height: 1.15rem;
-    border: 0.1em solid currentColor;
-    border-radius: 25%;
-    display: grid;
-    place-content: center;
-    cursor: pointer;
+    @apply appearance-none m-0 w-5 h-5 border rounded grid place-content-center cursor-pointer;
+}
+
+input[type=radio]:checked {
+    @apply border-none;
 }
 
 input[type=radio]::before {
     content: "";
-    box-shadow: 0 0 5px currentColor;
-    @apply w-4 h-4 transition-all scale-0;
+    @apply w-7 h-7 border rounded-md transition-all scale-0;
 }
 
 input[type=radio]:checked::before {
     @apply scale-100;
-    @apply bg-gradient-to-br from-transparent via-zinc-400/50 to-transparent;
 }
 
 [data-color=black] {

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { PreviewProps, ProductData, Children } from "~/types"
 import Image from "next/image"
 import Link from "next/link"
+import Swatch from "./Swatch"
 
 /** TODO: Need to pass product array to button to get colors */
 
@@ -26,7 +27,11 @@ export const ProductPreview = ({ product }: { product: ProductData }) => {
                 </h2>
                 <div className="flex justify-between">
                     <p className="-translate-y-0.5 text-sm opacity-75">$27</p>
-                    {Buttons(imagesLength, product[1])}
+                    <Swatch
+                        imagesLength={imagesLength}
+                        productImages={product[1]}
+                        setImage={setImage}
+                    />
                 </div>
             </div>
         </li>
@@ -56,41 +61,4 @@ export const ProductGrid = ({ children }: Children) => {
 
 export const CollectionGrid = ({ children }: Children) => {
     return <ul className="std-grid-md">{children}</ul>
-}
-
-function Buttons(imagesLength: number, productImages: JSX.Element[]): JSX.Element | null {
-    const colors = productImages.map((image) => {
-        return image.props.color
-    })
-
-    const swatch = productImages[0].key as string
-
-    switch (imagesLength) {
-        case 1:
-            return (
-                <span className="grid grid-cols-3 gap-1">
-                    <input type="radio" name={swatch} data-color={colors[0]} />
-                </span>
-            )
-
-        case 2:
-            return (
-                <span className="grid grid-cols-3 gap-1">
-                    <input type="radio" name={swatch} data-color={colors[0]} />
-                    <input type="radio" name={swatch} data-color={colors[1]} />
-                </span>
-            )
-
-        case 3:
-            return (
-                <span className="grid grid-cols-3 gap-1">
-                    <input type="radio" name={swatch} data-color={colors[0]} />
-                    <input type="radio" name={swatch} data-color={colors[1]} />
-                    <input type="radio" name={swatch} data-color={colors[2]} />
-                </span>
-            )
-
-        default:
-            return null
-    }
 }
