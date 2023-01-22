@@ -15,14 +15,14 @@ export default function Swatch({ productImages, setImage }: Props) {
     switch (numberOfSwatches) {
         case 1:
             return (
-                <span className="flex gap-1.5">
+                <label htmlFor={swatch} className="flex gap-2 py-2">
                     <input type="radio" name={swatch} data-color={colors[0]} defaultChecked />
-                </span>
+                </label>
             )
 
         case 2:
             return (
-                <span className="flex gap-1.5">
+                <label htmlFor={swatch} className="flex gap-2 py-2">
                     <input
                         type="radio"
                         name={swatch}
@@ -40,12 +40,12 @@ export default function Swatch({ productImages, setImage }: Props) {
                             setImage(productImages[1])
                         }}
                     />
-                </span>
+                </label>
             )
 
         case 3:
             return (
-                <span className="flex gap-1.5">
+                <label htmlFor={swatch} className="flex gap-2 py-2">
                     <input
                         type="radio"
                         name={swatch}
@@ -71,12 +71,12 @@ export default function Swatch({ productImages, setImage }: Props) {
                             setImage(productImages[2])
                         }}
                     />
-                </span>
+                </label>
             )
 
         case 4:
             return (
-                <span className="flex gap-1.5">
+                <label htmlFor={swatch} className="flex gap-2 py-2">
                     <input
                         type="radio"
                         name={swatch}
@@ -110,7 +110,7 @@ export default function Swatch({ productImages, setImage }: Props) {
                             setImage(productImages[3])
                         }}
                     />
-                </span>
+                </label>
             )
 
         default:

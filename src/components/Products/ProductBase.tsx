@@ -16,10 +16,8 @@ export const ProductPreview = ({ product }: { product: ProductData }) => {
                 <h2 className="overflow-hidden text-ellipsis whitespace-nowrap text-sm font-bold">
                     {product[0]}
                 </h2>
-                <div className="flex justify-between">
-                    <p className="-translate-y-0.5 text-sm opacity-75">$27</p>
-                    <Swatch productImages={product[1]} setImage={setImage} />
-                </div>
+                <p className="whitespace-nowrap pr-2 text-sm opacity-75">from $27</p>
+                <Swatch productImages={product[1]} setImage={setImage} />
             </div>
         </li>
     )
