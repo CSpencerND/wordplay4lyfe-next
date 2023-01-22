@@ -44,5 +44,5 @@ input[type=radio]:checked::before {
 }
 
 [data-color=pink] {
-    @apply bg-pink-400;
+    @apply bg-pink-300;
 }

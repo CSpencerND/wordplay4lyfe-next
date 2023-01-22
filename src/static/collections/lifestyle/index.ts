@@ -42,9 +42,11 @@ const imageImports: ImageData[] = []
 initialImports.forEach((imageImport) => {
     const imageData = imageImport[0]
     const alt: string = imageImport[1]
+    const color = imageImport[2]
 
     imageData.alt = alt
     imageImports.push(imageData)
+    imageData.color = color
 })
 
 imageImports.forEach((imageImport) => {

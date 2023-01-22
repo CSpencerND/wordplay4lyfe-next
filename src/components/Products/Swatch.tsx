@@ -74,6 +74,45 @@ export default function Swatch({ productImages, setImage }: Props) {
                 </span>
             )
 
+        case 4:
+            return (
+                <span className="flex gap-1.5">
+                    <input
+                        type="radio"
+                        name={swatch}
+                        data-color={colors[0]}
+                        defaultChecked
+                        onChange={() => {
+                            setImage(productImages[0])
+                        }}
+                    />
+                    <input
+                        type="radio"
+                        name={swatch}
+                        data-color={colors[1]}
+                        onChange={() => {
+                            setImage(productImages[1])
+                        }}
+                    />
+                    <input
+                        type="radio"
+                        name={swatch}
+                        data-color={colors[2]}
+                        onChange={() => {
+                            setImage(productImages[2])
+                        }}
+                    />
+                    <input
+                        type="radio"
+                        name={swatch}
+                        data-color={colors[3]}
+                        onChange={() => {
+                            setImage(productImages[3])
+                        }}
+                    />
+                </span>
+            )
+
         default:
             return null
     }

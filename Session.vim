@@ -14,22 +14,11 @@ else
   set shortmess=aoO
 endif
 badd +11 src/components/Products/ProductBase.tsx
-badd +11 ~/Code/wordplay4lyfe-next/src/styles/products.css
-badd +3 ~/Code/wordplay4lyfe-next/src/components/Products/Swatch.tsx
-badd +36 src/utils/useImageImports.tsx
 argglobal
 %argdel
 $argadd ./
-edit src/utils/useImageImports.tsx
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
+edit src/components/Products/ProductBase.tsx
 argglobal
-balt ~/Code/wordplay4lyfe-next/src/components/Products/Swatch.tsx
 setlocal fdm=manual
 setlocal fde=
 setlocal fmr={{{,}}}
@@ -40,12 +29,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 36 - ((35 * winheight(0) + 27) / 55)
+let s:l = 50 - ((49 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 36
-normal! 028|
+keepjumps 50
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -53,8 +42,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)

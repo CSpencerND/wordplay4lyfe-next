@@ -29,12 +29,12 @@ const initialImports: ImageImport[] = [
     [powerinnumberstee10, "powerinnumberstee10", "white"],
     [saylesstee10, "saylesstee10", "black"],
     [saylesstee11, "saylesstee11", "white"],
-    [saylesstee0, "saylesstee0", "black"],
-    [saylesstee1, "saylesstee1", "black"],
-    [saylesstee2, "saylesstee2", "black"],
-    [saylesstee3, "saylesstee3", "white"],
-    [saylesstee4, "saylesstee4", "white"],
-    [saylesstee5, "saylesstee5", "white"],
+    // [saylesstee0, "saylesstee0", "black"],
+    // [saylesstee1, "saylesstee1", "black"],
+    // [saylesstee2, "saylesstee2", "black"],
+    // [saylesstee3, "saylesstee3", "white"],
+    // [saylesstee4, "saylesstee4", "white"],
+    // [saylesstee5, "saylesstee5", "white"],
     [unisexheavycottontee20, "unisexheavycottontee20", "black"],
     [wordplayheartbeattee10, "wordplayheartbeattee10", "white"],
 ]
@@ -44,9 +44,11 @@ const imageImports: ImageData[] = []
 initialImports.forEach((imageImport) => {
     const imageData = imageImport[0]
     const alt: string = imageImport[1]
+    const color = imageImport[2]
 
     imageData.alt = alt
     imageImports.push(imageData)
+    imageData.color = color
 })
 
 imageImports.forEach((imageImport) => {
