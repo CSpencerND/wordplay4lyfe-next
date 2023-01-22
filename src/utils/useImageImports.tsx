@@ -33,6 +33,7 @@ export const useImageImports = (imageImports: ImageData[], props?: Props): JSX.E
                     role={props?.role}
                     onDragStart={props?.onDragStart}
                     color={color}
+                    priority
                 />
             )
         })
