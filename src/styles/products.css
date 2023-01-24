@@ -1,5 +1,5 @@
 input[type=radio] {
-    @apply appearance-none m-0 w-5 h-5 border rounded grid place-content-center cursor-pointer;
+    @apply appearance-none m-0 w-6 h-6 border rounded grid place-content-center cursor-pointer;
 }
 
 input[type=radio]:checked {
@@ -8,7 +8,7 @@ input[type=radio]:checked {
 
 input[type=radio]::before {
     content: "";
-    @apply w-7 h-7 border rounded-md transition-all scale-0;
+    @apply w-8 h-8 border rounded-md transition-all scale-0;
 }
 
 input[type=radio]:checked::before {
@@ -45,4 +45,11 @@ input[type=radio]:checked::before {
 
 [data-color=pink] {
     @apply bg-pink-300;
+}
+
+.product-title {
+    @apply absolute bottom-0 left-0 w-full;
+    @apply bg-gradient-to-t from-base-100 to-base-100/25 backdrop-blur;
+    @apply overflow-hidden text-ellipsis whitespace-nowrap;
+    @apply px-4 py-2 text-sm font-bold;
 }
