@@ -11,11 +11,15 @@ export const ProductPreview = ({ product }: { product: ProductData }) => {
 
     return (
         <li className="card" key={image.key}>
-            <figure className="">{image}</figure>
-            <div className="card-body !space-y-0 rounded-b-xl bg-base-300/50 px-4 py-2 backdrop-blur">
-                <h2 className="overflow-hidden text-ellipsis whitespace-nowrap text-sm font-bold">
-                    {product[0]}
-                </h2>
+            <label htmlFor="productModal">
+                <figure className="relative rounded-t-xl">
+                    {image}
+                    <h2 className="product-title">
+                        {product[0]}
+                    </h2>
+                </figure>
+            </label>
+            <div className="card-body !space-y-0 rounded-b-xl px-4 py-2 backdrop-blur">
                 <p className="whitespace-nowrap pr-2 text-sm opacity-75">from $27</p>
                 <Swatch productImages={product[1]} setImage={setImage} />
             </div>
@@ -42,8 +46,4 @@ export const CollectionPreview = ({ src, title, href }: PreviewProps) => {
 
 export const ProductGrid = ({ children }: Children) => {
     return <ul className="std-grid-lg">{children}</ul>
-}
-
-export const CollectionGrid = ({ children }: Children) => {
-    return <ul className="std-grid-md">{children}</ul>
 }
