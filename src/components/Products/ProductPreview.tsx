@@ -1,33 +1,38 @@
-import { useState } from "react"
-import { PreviewProps, ProductData, Children } from "~/types"
+import { CollectionProps, ProductProps, ProductAttributes } from "~/types"
 import Image from "next/image"
 import Link from "next/link"
-import Swatch from "./Swatch"
+import { Swatch } from "./"
 
 /** TODO: Need to pass product array to button to get colors */
 
-export const ProductPreview = ({ product }: { product: ProductData }) => {
-    const [image, setImage] = useState<JSX.Element>(product[1][0])
+interface PreviewProps extends ProductProps {
+    setModal: React.Dispatch<React.SetStateAction<ProductAttributes>>
+    image: JSX.Element
+    setImage: React.Dispatch<React.SetStateAction<JSX.Element>>
+}
+
+export const ProductPreview = ({ attributes, setModal, image, setImage }: PreviewProps) => {
+    const { title, images, id } = attributes
+
+    const handleClick = () => setModal(attributes)
 
     return (
-        <li className="card" key={image.key}>
-            <label htmlFor="productModal">
+        <li className="card transition-all hover:scale-105" key={id}>
+            <label className="cursor-pointer" htmlFor="productModal" onClick={handleClick}>
                 <figure className="relative rounded-t-xl">
-                    {image}
-                    <h2 className="product-title">
-                        {product[0]}
-                    </h2>
+                    {images[0]}
+                    <h2 className="product-title">{title}</h2>
                 </figure>
             </label>
             <div className="card-body !space-y-0 rounded-b-xl px-4 py-2 backdrop-blur">
                 <p className="whitespace-nowrap pr-2 text-sm opacity-75">from $27</p>
-                <Swatch productImages={product[1]} setImage={setImage} />
+                <Swatch productImages={images} setImage={setImage} />
             </div>
         </li>
     )
 }
 
-export const CollectionPreview = ({ src, title, href }: PreviewProps) => {
+export const CollectionPreview = ({ src, title, href }: CollectionProps) => {
     return (
         <li className="transition-all active:scale-95">
             <Link href={href} className="card">
@@ -42,8 +47,4 @@ export const CollectionPreview = ({ src, title, href }: PreviewProps) => {
             </Link>
         </li>
     )
-}
-
-export const ProductGrid = ({ children }: Children) => {
-    return <ul className="std-grid-lg">{children}</ul>
 }

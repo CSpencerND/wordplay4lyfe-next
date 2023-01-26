@@ -13,12 +13,27 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +11 src/components/Products/ProductBase.tsx
+badd +21 src/components/Products/Swatch.tsx
+badd +11 ~/Code/wordplay4lyfe-next/src/components/Products/ProductBase.tsx
+badd +0 src/static/collections/creative/index.ts
+badd +0 src/static/collections/lifestyle/index.ts
+badd +0 src/static/collections/mindset/index.ts
+badd +0 src/static/collections/staff/index.ts
+badd +0 src/static/collections/summer/index.ts
 argglobal
 %argdel
-$argadd ./
-edit src/components/Products/ProductBase.tsx
+$argadd src/static/collections/creative/index.ts
+$argadd src/static/collections/lifestyle/index.ts
+$argadd src/static/collections/mindset/index.ts
+$argadd src/static/collections/staff/index.ts
+$argadd src/static/collections/summer/index.ts
+edit ~/Code/wordplay4lyfe-next/src/components/Products/ProductBase.tsx
 argglobal
+if bufexists(fnamemodify("~/Code/wordplay4lyfe-next/src/components/Products/ProductBase.tsx", ":p")) | buffer ~/Code/wordplay4lyfe-next/src/components/Products/ProductBase.tsx | else | edit ~/Code/wordplay4lyfe-next/src/components/Products/ProductBase.tsx | endif
+if &buftype ==# 'terminal'
+  silent file ~/Code/wordplay4lyfe-next/src/components/Products/ProductBase.tsx
+endif
+balt src/components/Products/Swatch.tsx
 setlocal fdm=manual
 setlocal fde=
 setlocal fmr={{{,}}}
@@ -29,11 +44,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 50 - ((49 * winheight(0) + 28) / 56)
+let s:l = 17 - ((11 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 50
+keepjumps 17
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

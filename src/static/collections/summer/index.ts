@@ -68,4 +68,4 @@ imageImports.forEach((imageImport) => {
 })
 
 export default imageImports
-export { yumyumtee1 }
+export { yumyumtee1, imageImports as summerImports }

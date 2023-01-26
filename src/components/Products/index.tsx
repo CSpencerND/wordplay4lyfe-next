@@ -1,8 +1,4 @@
-export { CollectionGrid, CollectionPreview } from "./ProductBase"
-export { ProductGrid, ProductPreview } from "./ProductBase"
-
-export { SummerProducts } from "./Collections/SummerProducts"
-export { CreativeProducts } from "./Collections/CreativeProducts"
-export { MindsetProducts } from "./Collections/MindsetProducts"
-export { LifestyleProducts } from "./Collections/LifestyleProducts"
-export { StaffProducts } from "./Collections/StaffProducts"
+export { CollectionPreview, ProductPreview } from "./ProductPreview"
+export { ProductModal } from "./ProductModal"
+export { Swatch } from "./Swatch"
+export { Collection } from "./Collection"

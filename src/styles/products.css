@@ -24,7 +24,7 @@ input[type=radio]:checked::before {
 }
 
 [data-color=brown] {
-    @apply bg-brown-500;
+    @apply bg-brown-800;
 }
 
 [data-color=navy] {

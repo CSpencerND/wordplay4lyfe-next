@@ -1,3 +1,3 @@
+export { type Children, type CollectionProps, type ProductProps } from "./Props"
 export { type ImageData, type ImageImport } from "./ImageImport"
-export { type Children, type PreviewProps } from "./Props"
-export type ProductData = [string, JSX.Element[]]
+export { type ProductData, type ProductAttributes } from "./ProductData"

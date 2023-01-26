@@ -46,4 +46,4 @@ imageImports.forEach((imageImport) => {
 })
 
 export default imageImports
-export { unisexjerseyshortsleevetee10 }
+export { unisexjerseyshortsleevetee10, imageImports as creativeImports }

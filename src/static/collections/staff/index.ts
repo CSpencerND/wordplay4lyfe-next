@@ -62,4 +62,4 @@ imageImports.forEach((imageImport) => {
 })
 
 export default imageImports
-export { facesofchangetee10 }
+export { facesofchangetee10, imageImports as staffImports }

@@ -62,4 +62,4 @@ imageImports.forEach((imageImport) => {
 })
 
 export default imageImports
-export { mensshortsleevetee11 }
+export { mensshortsleevetee11, imageImports as mindsetImports }

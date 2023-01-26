@@ -3,7 +3,7 @@ interface Props {
     setImage: React.Dispatch<React.SetStateAction<JSX.Element>>
 }
 
-export default function Swatch({ productImages, setImage }: Props) {
+export const Swatch = ({ productImages, setImage }: Props) => {
     const numberOfSwatches = productImages.length
 
     const colors = productImages.map((image) => {

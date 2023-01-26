@@ -13,7 +13,10 @@ interface Props {
  *
  * @returns Array of NextJS <Image /> components
  */
-export const useImageImports = (imageImports: ImageData[], props?: Props): JSX.Element[] => {
+export const useImageImports = (
+    imageImports: ImageData[],
+    props?: Props
+): JSX.Element[] => {
     const [images, setImages] = useState<JSX.Element[]>([])
     useEffect(() => {
         const imageData = imageImports.map((data) => {
@@ -39,7 +42,7 @@ export const useImageImports = (imageImports: ImageData[], props?: Props): JSX.E
         })
 
         setImages(imageData)
-    }, []) // eslint-disable-line
+    }, [imageImports]) // eslint-disable-line
 
     return images
 }

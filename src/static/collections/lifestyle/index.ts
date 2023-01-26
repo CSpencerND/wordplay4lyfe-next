@@ -60,4 +60,4 @@ imageImports.forEach((imageImport) => {
 })
 
 export default imageImports
-export { tvpopculturetee10 }
+export { tvpopculturetee10, imageImports as lifestyleImports }
