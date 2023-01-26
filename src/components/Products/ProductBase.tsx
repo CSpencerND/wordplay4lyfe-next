@@ -21,10 +21,10 @@ export const ProductPreview = ({ product }: DataProps) => {
                         <h2 className="product-title">{product[0]}</h2>
                     </figure>
                 </label>
-                <div className="card-body !space-y-0 rounded-b-xl px-4 py-2">
-                    <p className="whitespace-nowrap pr-2 text-sm opacity-75">from $27</p>
+                <section className="card-body !space-y-0 rounded-b-xl px-4 py-2">
+                    {/* <p className="whitespace-nowrap pr-2 text-sm opacity-75">from $27</p> */}
                     <Swatch productImages={product[1]} setImage={setImage} />
-                </div>
+                </section>
             </li>
             <ProductModal product={product}/>
         </>
