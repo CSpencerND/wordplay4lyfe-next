@@ -1,4 +1,4 @@
-export { CollectionGrid, CollectionPreview } from "./ProductBase"
+export { CollectionPreview } from "./ProductBase"
 export { ProductGrid, ProductPreview } from "./ProductBase"
 
 export { SummerProducts } from "./Collections/SummerProducts"
