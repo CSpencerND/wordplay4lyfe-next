@@ -3,27 +3,31 @@ import { PreviewProps, ProductData, Children } from "~/types"
 import Image from "next/image"
 import Link from "next/link"
 import Swatch from "./Swatch"
+import ProductModal from "./ProductModal"
 
-/** TODO: Need to pass product array to button to get colors */
+interface DataProps {
+    product: ProductData
+}
 
-export const ProductPreview = ({ product }: { product: ProductData }) => {
+export const ProductPreview = ({ product }: DataProps) => {
     const [image, setImage] = useState<JSX.Element>(product[1][0])
 
     return (
-        <li className="card" key={image.key}>
-            <label htmlFor="productModal">
-                <figure className="relative rounded-t-xl">
-                    {image}
-                    <h2 className="product-title">
-                        {product[0]}
-                    </h2>
-                </figure>
-            </label>
-            <div className="card-body !space-y-0 rounded-b-xl px-4 py-2 backdrop-blur">
-                <p className="whitespace-nowrap pr-2 text-sm opacity-75">from $27</p>
-                <Swatch productImages={product[1]} setImage={setImage} />
-            </div>
-        </li>
+        <>
+            <li className="card" key={image.key}>
+                <label htmlFor={`${product[0]}Modal`}>
+                    <figure className="relative cursor-pointer rounded-t-xl">
+                        {image}
+                        <h2 className="product-title">{product[0]}</h2>
+                    </figure>
+                </label>
+                <div className="card-body !space-y-0 rounded-b-xl px-4 py-2">
+                    <p className="whitespace-nowrap pr-2 text-sm opacity-75">from $27</p>
+                    <Swatch productImages={product[1]} setImage={setImage} />
+                </div>
+            </li>
+            <ProductModal product={product}/>
+        </>
     )
 }
 
