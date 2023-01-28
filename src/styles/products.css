@@ -2,16 +2,16 @@ input[type=radio] {
     @apply appearance-none m-0 w-6 h-6 border rounded grid place-content-center cursor-pointer;
 }
 
-input[type=radio]:checked {
+.swatch:checked {
     @apply border-none;
 }
 
-input[type=radio]::before {
+.swatch::before {
     content: "";
     @apply w-8 h-8 border rounded-md transition-all scale-0;
 }
 
-input[type=radio]:checked::before {
+.swatch:checked::before {
     @apply scale-100;
 }
 
@@ -52,4 +52,16 @@ input[type=radio]:checked::before {
     @apply bg-gradient-to-t from-base-100 to-base-100/25 backdrop-blur;
     @apply overflow-hidden text-ellipsis whitespace-nowrap;
     @apply px-4 py-2 text-sm font-bold;
+}
+
+.size-btn {
+    @apply btn-square btn-sm btn !h-12 !w-12;
+}
+
+.size-select {
+    @apply absolute border-base-300 !w-12 !h-12 !rounded-md;
+}
+
+.size-select:checked {
+    @apply border-primary !border-2;
 }

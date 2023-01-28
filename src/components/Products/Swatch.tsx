@@ -16,7 +16,13 @@ export default function Swatch({ productImages, setImage }: Props) {
         case 1:
             return (
                 <label htmlFor={swatch} className="flex gap-2 py-2">
-                    <input type="radio" name={swatch} data-color={colors[0]} defaultChecked />
+                    <input
+                        className="swatch"
+                        type="radio"
+                        name={swatch}
+                        data-color={colors[0]}
+                        defaultChecked
+                    />
                 </label>
             )
 
@@ -24,6 +30,7 @@ export default function Swatch({ productImages, setImage }: Props) {
             return (
                 <label htmlFor={swatch} className="flex gap-2 py-2">
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[0]}
@@ -33,6 +40,7 @@ export default function Swatch({ productImages, setImage }: Props) {
                         }}
                     />
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[1]}
@@ -47,6 +55,7 @@ export default function Swatch({ productImages, setImage }: Props) {
             return (
                 <label htmlFor={swatch} className="flex gap-2 py-2">
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[0]}
@@ -56,6 +65,7 @@ export default function Swatch({ productImages, setImage }: Props) {
                         }}
                     />
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[1]}
@@ -64,6 +74,7 @@ export default function Swatch({ productImages, setImage }: Props) {
                         }}
                     />
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[2]}
@@ -78,6 +89,7 @@ export default function Swatch({ productImages, setImage }: Props) {
             return (
                 <label htmlFor={swatch} className="flex gap-2 py-2">
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[0]}
@@ -87,6 +99,7 @@ export default function Swatch({ productImages, setImage }: Props) {
                         }}
                     />
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[1]}
@@ -95,6 +108,7 @@ export default function Swatch({ productImages, setImage }: Props) {
                         }}
                     />
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[2]}
@@ -103,6 +117,7 @@ export default function Swatch({ productImages, setImage }: Props) {
                         }}
                     />
                     <input
+                        className="swatch"
                         type="radio"
                         name={swatch}
                         data-color={colors[3]}
